@@ -16,7 +16,7 @@ const DeleteBrandForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} class="text-black">
             <h2>Delete Brand</h2>
             <div>
                 <label>Brand ID:</label>

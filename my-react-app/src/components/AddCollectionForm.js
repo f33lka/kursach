@@ -16,7 +16,7 @@ const AddCollectionForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} class="text-black">
             <h2>Add Collection</h2>
             <div>
                 <label>Owner:</label>

@@ -16,7 +16,7 @@ const DeleteCollectionForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} class="text-black">
             <h2>Delete Collection</h2>
             <div>
                 <label>Collection ID:</label>

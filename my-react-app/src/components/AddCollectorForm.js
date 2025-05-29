@@ -16,7 +16,7 @@ const AddCollectorForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} class="text-black">
             <h2>Add Collector</h2>
             <div>
                 <label>Contact:</label>

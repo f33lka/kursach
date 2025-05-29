@@ -17,7 +17,7 @@ const CollectorList = () => {
     };
 
     return (
-        <div>
+        <div class="text-black">
             <h2>Collector List</h2>
             <ul>
                 {collectors.map(collector => (

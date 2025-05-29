@@ -15,7 +15,7 @@ const CollectionList = () => {
     };
 
     return (
-        <div>
+        <div class="text-black">
             <h2>Collection List</h2>
             <ul>
                 {collections.map(collection => (

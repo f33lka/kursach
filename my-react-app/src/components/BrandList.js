@@ -15,7 +15,7 @@ const BrandList = () => {
     };
 
     return (
-        <div>
+        <div class="text-black">
             <h2>Brand List</h2>
             <ul>
                 {brands.map(brand => (
