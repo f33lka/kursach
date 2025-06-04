@@ -33,7 +33,7 @@ const App = () => {
                         </div>
                     </div>
 
-                    <div class="w-7/12 flex justify-end text-center font-sans font-semibold">
+                    <div class="w-7/12 flex justify-end text-center font-sans font-semibold text-gray-600">
                         <div class="w-1/10 flex justify-center">
                             <button class="mt-2 w-10/12 h-10 rounded-lg transition-colors duration-200 ease-in-out hover:bg-gray-300 hover:text-red-600" onClick={() => toggleWindow(1)}>
                                 марки
@@ -52,7 +52,7 @@ const App = () => {
                             </button>
                         </div>
 
-                        <div class="w-1/6 flex justify-center">
+                        <div class="w-1/11 flex justify-center">
                             <button class="mt-2 w-10/12 h-10 rounded-lg transition-colors duration-200 ease-in-out hover:bg-gray-300 hover:text-red-600" onClick={() => toggleWindow(4)}>
                                 тесты
                             </button>

@@ -19,22 +19,28 @@ const AddCollectorForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit} class="text-black">
-            <h2>Add Collector</h2>
-
+        <form class="w-1/4 p-2 bg-gray-200 rounded-lg text-black flex flex-col justify-between" onSubmit={handleSubmit}>
             <div>
-                <label>Contact:</label>
+                <h2 class="my-2 text-center text-lg font-semibold">Add Collector</h2>
 
-                <input
-                    type="text"
-                    value={contact}
-                    onChange={(e) => setContact(e.target.value)}
+                <div class="my-1 flex justify-between">
+                    <label>Contact:</label>
 
-                    required
-                />
+                    <input class="w-1/2 bg-gray-300 rounded-lg"
+                        type="text"
+                        value={contact}
+                        onChange={(e) => setContact(e.target.value)}
+
+                        required
+                    />
+                </div>
             </div>
             
-            <button type="submit">Add Collector</button>
+            <div class="h-1/18 flex justify-center">
+                <button class="w-2/3 border-2 border-gray-300 rounded-lg font-sans font-semibold transition-colors duration-200 ease-in-out hover:bg-gray-300 hover:text-red-600" type="submit">
+                    Add Collector
+                </button>
+            </div>
         </form>
     );
 };

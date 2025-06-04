@@ -43,116 +43,122 @@ const AddBrandForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit} class="text-black">
-            <h2>Add Brand</h2>
-
+        <form class="w-1/4 p-2 bg-gray-200 rounded-lg text-black flex flex-col justify-between" onSubmit={handleSubmit}>
             <div>
-                <label>Name:</label>
+                <h2 class="my-2 text-center text-lg font-semibold">Add Brand</h2>
 
-                <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
+                <div class="my-1 flex justify-between">
+                    <label>Name:</label>
 
-                    required
-                />
-            </div>
+                    <input class="w-1/2 bg-gray-300 rounded-lg"
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
 
-            <div>
-                <label>Theme:</label>
+                        required
+                    />
+                </div>
 
-                <input
-                    type="text"
-                    name="theme"
-                    value={formData.theme}
-                    onChange={handleChange}
-                />
-            </div>
+                <div class="my-1 flex justify-between">
+                    <label>Theme:</label>
 
-            <div>
-                <label>Country:</label>
+                    <input class="w-1/2 bg-gray-300 rounded-lg"
+                        type="text"
+                        name="theme"
+                        value={formData.theme}
+                        onChange={handleChange}
+                    />
+                </div>
 
-                <input
-                    type="text"
-                    name="country"
-                    value={formData.country}
-                    onChange={handleChange}
+                <div class="my-1 flex justify-between">
+                    <label>Country:</label>
 
-                    required
-                />
-            </div>
+                    <input class="w-1/2 bg-gray-300 rounded-lg"
+                        type="text"
+                        name="country"
+                        value={formData.country}
+                        onChange={handleChange}
 
-            <div>
-                <label>Features:</label>
+                        required
+                    />
+                </div>
 
-                <input
-                    type="text"
-                    name="features"
-                    value={formData.features}
-                    onChange={handleChange}
-                />
-            </div>
+                <div class="my-1 flex justify-between">
+                    <label>Features:</label>
 
-            <div>
-                <label>Release Date:</label>
+                    <input class="w-1/2 bg-gray-300 rounded-lg"
+                        type="text"
+                        name="features"
+                        value={formData.features}
+                        onChange={handleChange}
+                    />
+                </div>
 
-                <input
-                    type="text"
-                    name="release_date"
-                    value={formData.release_date}
-                    onChange={handleChange}
-                />
-            </div>
+                <div class="my-1 flex justify-between">
+                    <label>Release Date:</label>
 
-            <div>
-                <label>Circulation:</label>
+                    <input class="w-1/2 bg-gray-300 rounded-lg"
+                        type="text"
+                        name="release_date"
+                        value={formData.release_date}
+                        onChange={handleChange}
+                    />
+                </div>
 
-                <input
-                    type="number"
-                    name="circulation"
-                    value={formData.circulation}
-                    onChange={handleChange}
-                />
-            </div>
+                <div class="my-1 flex justify-between">
+                    <label>Circulation:</label>
 
-            <div>
-                <label>Acquisition Date:</label>
+                    <input class="w-1/2 bg-gray-300 rounded-lg"
+                        type="number"
+                        name="circulation"
+                        value={formData.circulation}
+                        onChange={handleChange}
+                    />
+                </div>
 
-                <input
-                    type="text"
-                    name="acquisition_date"
-                    value={formData.acquisition_date}
-                    onChange={handleChange}
-                />
-            </div>
+                <div class="my-1 flex justify-between">
+                    <label>Acquisition Date:</label>
 
-            <div>
-                <label>Price:</label>
+                    <input class="w-1/2 bg-gray-300 rounded-lg"
+                        type="text"
+                        name="acquisition_date"
+                        value={formData.acquisition_date}
+                        onChange={handleChange}
+                    />
+                </div>
 
-                <input
-                    type="number"
-                    name="price"
-                    value={formData.price}
-                    onChange={handleChange}
-                    step="0.01"
-                />
-            </div>
+                <div class="my-1 flex justify-between">
+                    <label>Price:</label>
 
-            <div>
-                <label>Collector Contact:</label>
+                    <input class="w-1/2 bg-gray-300 rounded-lg"
+                        type="number"
+                        name="price"
+                        value={formData.price}
+                        onChange={handleChange}
+                        step="0.01"
+                    />
+                </div>
 
-                <input
-                    type="text"
-                    name="collectorContact"
-                    value={formData.collectorContact}
-                    onChange={handleChange}
+                <div class="my-1 flex justify-between">
+                    <label>Collector Contact:</label>
 
-                    required
-                />
+                    <input class="w-1/2 bg-gray-300 rounded-lg"
+                        type="text"
+                        name="collectorContact"
+                        value={formData.collectorContact}
+                        onChange={handleChange}
+
+                        required
+                    />
+                </div>
             </div>
             
-            <button type="submit">Add Brand</button>
+            <div class="h-1/18 flex justify-center">
+                <button class="w-2/3 border-2 border-gray-300 rounded-lg font-sans font-semibold transition-colors duration-200 ease-in-out hover:bg-gray-300 hover:text-red-600" type="submit">
+                    Add Brand
+                </button>
+            </div>
         </form>
     );
 };

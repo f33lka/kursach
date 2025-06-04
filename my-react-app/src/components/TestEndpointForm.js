@@ -47,23 +47,25 @@ const TestEndpointForm = () => {
     }, []);
 
     return (
-        <div className="text-black">
-            <h2>Test All Endpoints</h2>
+        <div class="w-1/4 p-2 bg-gray-200 rounded-lg text-black flex flex-col">
+            <h2 class="my-2 text-center text-lg font-semibold">Test All Endpoints</h2>
 
-            <button onClick={runAllTests}>Run Tests</button>
+            <div class="w-full h-4/65 flex justify-center">
+                <button class="my-1 w-2/3 border-2 border-gray-300 rounded-lg font-sans font-semibold transition-colors duration-200 ease-in-out hover:bg-gray-300 hover:text-red-600" onClick={runAllTests}>
+                    Run Tests
+                </button>
+            </div>
 
-            <div className="mt-4">
-                <h3>Test Results</h3>
-
+            <div className="mt-4 h-12/13 overflow-auto">
                 <ul>
                     {testResults.map((result, index) => (
-                        <li key={index}>
-                            <strong>{result.name}:</strong> {result.status === 'Success' ? 'Success' : `Failed - ${result.error}`}
+                        <li class="p-2 my-1 bg-gray-300 rounded-lg" key={index}>
+                            <div class="flex justify-between">
+                                <strong>{result.name}:</strong> <strong class="w-full mr-2 text-right">{result.status === 'Success' ? 'Success' : `Failed - ${result.error}`}</strong><br />
+                            </div>
 
                             {result.status === 'Success' && (
                                 <div>
-                                    <strong>Data:</strong>
-                                    
                                     <pre>{JSON.stringify(result.data, null, 2)}</pre>
                                 </div>
                             )}
