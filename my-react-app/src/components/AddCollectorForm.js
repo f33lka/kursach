@@ -6,9 +6,12 @@ const AddCollectorForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
         try {
             await addCollector({ contact });
+
             alert('Collector added successfully!');
+
             setContact('');
         } catch (error) {
             alert(`Failed to add collector: ${error.response?.data?.error || error.message}`);
@@ -18,15 +21,19 @@ const AddCollectorForm = () => {
     return (
         <form onSubmit={handleSubmit} class="text-black">
             <h2>Add Collector</h2>
+
             <div>
                 <label>Contact:</label>
+
                 <input
                     type="text"
                     value={contact}
                     onChange={(e) => setContact(e.target.value)}
+
                     required
                 />
             </div>
+            
             <button type="submit">Add Collector</button>
         </form>
     );

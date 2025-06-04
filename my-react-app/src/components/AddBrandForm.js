@@ -20,9 +20,12 @@ const AddBrandForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
         try {
             await addBrand({ formData });
+
             alert('Brand added successfully!');
+
             setFormData({
                 name: '',
                 theme: '',
@@ -42,18 +45,23 @@ const AddBrandForm = () => {
     return (
         <form onSubmit={handleSubmit} class="text-black">
             <h2>Add Brand</h2>
+
             <div>
                 <label>Name:</label>
+
                 <input
                     type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
+
                     required
                 />
             </div>
+
             <div>
                 <label>Theme:</label>
+
                 <input
                     type="text"
                     name="theme"
@@ -61,18 +69,23 @@ const AddBrandForm = () => {
                     onChange={handleChange}
                 />
             </div>
+
             <div>
                 <label>Country:</label>
+
                 <input
                     type="text"
                     name="country"
                     value={formData.country}
                     onChange={handleChange}
+
                     required
                 />
             </div>
+
             <div>
                 <label>Features:</label>
+
                 <input
                     type="text"
                     name="features"
@@ -80,8 +93,10 @@ const AddBrandForm = () => {
                     onChange={handleChange}
                 />
             </div>
+
             <div>
                 <label>Release Date:</label>
+
                 <input
                     type="text"
                     name="release_date"
@@ -89,8 +104,10 @@ const AddBrandForm = () => {
                     onChange={handleChange}
                 />
             </div>
+
             <div>
                 <label>Circulation:</label>
+
                 <input
                     type="number"
                     name="circulation"
@@ -98,8 +115,10 @@ const AddBrandForm = () => {
                     onChange={handleChange}
                 />
             </div>
+
             <div>
                 <label>Acquisition Date:</label>
+
                 <input
                     type="text"
                     name="acquisition_date"
@@ -107,8 +126,10 @@ const AddBrandForm = () => {
                     onChange={handleChange}
                 />
             </div>
+
             <div>
                 <label>Price:</label>
+
                 <input
                     type="number"
                     name="price"
@@ -117,16 +138,20 @@ const AddBrandForm = () => {
                     step="0.01"
                 />
             </div>
+
             <div>
                 <label>Collector Contact:</label>
+
                 <input
                     type="text"
                     name="collectorContact"
                     value={formData.collectorContact}
                     onChange={handleChange}
+
                     required
                 />
             </div>
+            
             <button type="submit">Add Brand</button>
         </form>
     );
